@@ -11,7 +11,7 @@
     "start:server": "npm run start --prefix server",
     "start:client": "npm run preview --prefix client",
     "start": "concurrently -n server,client -c blue,green \"npm run start:server\" \"npm run start:client\"",
-    "build": "npm run build --prefix client",
+    "build": "cd client && npm install && npm run build",
     "lint": "npm run lint --prefix client",
     "setup": "npm run install:all",
     "dev:all": "npm run install:all && npm run dev",
